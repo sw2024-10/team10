@@ -1,15 +1,151 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* 背景色 */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #4CAF50; /* サイドバーの背景色 */
+    color: #fff;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* サイドバーに影を追加 */
+}
+
+.sidebar.hide {
+    transform: translateX(-100%);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline; /* ホバー時の効果 */
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+.content.hide {
+    margin-left: 20px;
+}
+
+#toggle-btn {
+    background-color: #4CAF50; /* ボタンの背景色 */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* 背景色 */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #4CAF50; /* サイドバーの背景色 */
+    color: #fff;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* サイドバーに影を追加 */
+}
+
+.sidebar.hide {
+    transform: translateX(-100%);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline; /* ホバー時の効果 */
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+.content.hide {
+    margin-left: 20px;
+}
+
+#toggle-btn {
+    background-color: #4CAF50; /* ボタンの背景色 */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* ボタンが他の要素の上に表示されるようにする */
+    border-radius: 5px; /* 角を丸める */
+}
+
+#toggle-btn:hover {
+    background-color: #45a049; /* ホバー時のボタンの背景色 */
+
+
+    left: 10px;
+    z-index: 1000; /* ボタンが他の要素の上に表示されるようにする */
+    border-radius: 5px; /* 角を丸める */
+}
+
+#toggle-btn:hover {
+    background-color: #45a049; /* ホバー時のボタンの背景色 */
+}
+
