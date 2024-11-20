@@ -31,9 +31,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_13_090303) do
     t.string "title"
     t.integer "time"
     t.integer "kcal"
-    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category"
   end
 
   add_foreign_key "ingredients", "recipes"
