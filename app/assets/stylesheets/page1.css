@@ -1,0 +1,38 @@
+body.page1 {
+    background: linear-gradient(120deg, #ff7e5f, #feb47b); /* オレンジ系グラデーション */
+    color: #fff; /* 白文字でコントラストを調整 */
+}/* デフォルトの背景スタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #ffecd2, #fcb69f); /* グラデーション背景 */
+    color: #333;
+}
+
+/* レシピページ固有のスタイル */
+body.recipes-show {
+    background-image: url('https://example.com/recipe-background.jpg'); /* レシピ特有の背景画像 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* 半透明でコンテンツ背景 */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: blue; /* タイトルにアクセントカラー */
+}
+
+p, ul, ol {
+    line-height: 1.6;
+}

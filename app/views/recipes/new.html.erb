@@ -1,43 +1,47 @@
-<h1>料理の新規追加</h1>
+<%= stylesheet_link_tag 'page1', media: 'all' %>
 
-<%= form_with model: @recipe, local: true do |form| %>
-  <div>
-    <%= form.label :title, "料理名" %>
-    <%= form.text_field :title %>
-  </div>
+<div class="container">
+  <h1>料理の新規追加</h1>
 
-  <div>
-    <%= form.label :time, "所要時間（分）" %>
-    <%= form.number_field :time %>
-  </div>
-
-  <div>
-    <%= form.label :kcal, "カロリー（kcal）" %>
-    <%= form.number_field :kcal %>
-  </div>
-
-  <div>
-    <%= form.label :type, "種類" %>
-    <%= form.text_field :type %>
-  </div>
-
-  <h2>材料</h2>
-  <%= form.fields_for :ingredients do |ingredient_form| %>
+  <%= form_with model: @recipe, local: true do |form| %>
     <div>
-      <%= ingredient_form.label :name, "材料" %>
-      <%= ingredient_form.text_field :name %>
-      <%= ingredient_form.check_box :_destroy %> 削除
+      <%= form.label :title, "料理名" %>
+      <%= form.text_field :title %>
     </div>
-  <% end %>
 
-  <h2>作り方</h2>
-  <%= form.fields_for :procedures do |procedure_form| %>
     <div>
-      <%= procedure_form.label :step, "手順" %>
-      <%= procedure_form.text_area :step %>
-      <%= procedure_form.check_box :_destroy %> 削除
+      <%= form.label :time, "所要時間（分）" %>
+      <%= form.number_field :time %>
     </div>
-  <% end %>
 
-  <%= form.submit "追加" %>
-<% end %>
+    <div>
+      <%= form.label :kcal, "カロリー（kcal）" %>
+      <%= form.number_field :kcal %>
+    </div>
+
+    <div>
+      <%= form.label :type, "種類" %>
+      <%= form.text_field :type %>
+    </div>
+
+    <h2>材料</h2>
+    <%= form.fields_for :ingredients do |ingredient_form| %>
+      <div>
+        <%= ingredient_form.label :name, "材料" %>
+        <%= ingredient_form.text_field :name %>
+        <%= ingredient_form.check_box :_destroy %> 削除
+      </div>
+    <% end %>
+
+    <h2>作り方</h2>
+    <%= form.fields_for :procedures do |procedure_form| %>
+      <div>
+        <%= procedure_form.label :step, "手順" %>
+        <%= procedure_form.text_area :step %>
+        <%= procedure_form.check_box :_destroy %> 削除
+      </div>
+    <% end %>
+
+    <%= form.submit "追加" %>
+  <% end %>
+</div>
