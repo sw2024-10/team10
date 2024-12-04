@@ -1,38 +1,89 @@
-body.page1 {
-    background: linear-gradient(120deg, #ff7e5f, #feb47b); /* オレンジ系グラデーション */
-    color: #fff; /* 白文字でコントラストを調整 */
-}/* デフォルトの背景スタイル */
+/* 全体のリセットスタイル */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #ffecd2, #fcb69f); /* グラデーション背景 */
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #f6d365, #fda085); /* 暖色系グラデーション */
+  color: #333; /* ベース文字色 */
 }
 
-/* レシピページ固有のスタイル */
-body.recipes-show {
-    background-image: url('https://example.com/recipe-background.jpg'); /* レシピ特有の背景画像 */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
+/* ヘッダーのスタイル */
+header {
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* テキストに影を追加 */
+  background: rgba(0, 0, 0, 0.2); /* 半透明の背景 */
 }
 
+/* メインコンテンツのスタイル */
 .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* 半透明でコンテンツ背景 */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* コンテンツの影 */
+  text-align: center;
 }
 
+/* セクションタイトルのスタイル */
 h1 {
-    text-align: center;
-    color: blue; /* タイトルにアクセントカラー */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f76c6c; /* タイトルのアクセントカラー */
 }
 
+h2 {
+  font-size: 1.8rem;
+  margin: 20px 0 10px;
+  color: #555; /* セクションタイトルはやや落ち着いた色 */
+}
+
+/* テキストとリストのスタイル */
 p, ul, ol {
-    line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0 auto 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* ボタンのスタイル */
+button {
+  display: inline-block;
+  background: #ff7e5f;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* ボタンに軽い影を追加 */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #feb47b;
+  transform: translateY(-2px); /* ホバー時に少し浮かせる */
+}
+
+/* フッターのスタイル */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.4); /* 半透明の背景 */
 }

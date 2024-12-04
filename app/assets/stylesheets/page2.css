@@ -1,0 +1,93 @@
+/* 全体リセットスタイル */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(120deg, #f6d365, #fda085); /* 暖色系グラデーション */
+  color: #333; /* テキスト色 */
+}
+
+/* ページ全体のレイアウト */
+.container {
+  display: flex; /* サイドバーとメインコンテンツを横並びにする */
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* 背景に半透明の白 */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* ボックスに影を追加 */
+}
+
+/* サイドバーのスタイル */
+.sidebar {
+  flex: 1; /* サイドバーの幅を固定 */
+  max-width: 300px;
+  background: #ffe9d6; /* サイドバー用の背景色 */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* サイドバーに影 */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #f76c6c; /* アクセントカラー */
+}
+
+.sidebar ul {
+  list-style-type: none; /* リストのデザインをシンプルに */
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  font-size: 1rem;
+  padding: 10px;
+  background: black;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 各リスト項目に影 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar li:hover {
+  transform: translateY(-3px); /* ホバー時に浮く */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ホバー時に影を強調 */
+}
+
+/* メインコンテンツのスタイル */
+.main-content {
+  flex: 3; /* メインコンテンツの幅を広く */
+  margin-left: 20px;
+  padding: 20px;
+  background: white; /* 背景は純白 */
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333; /* メインタイトルは落ち着いた色 */
+}
+
+.main-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.main-content ul, .main-content ol {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+/* フッターのスタイル */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.6); /* 半透明の背景 */
+  margin-top: 20px;
+  border-radius: 0 0 10px 10px;
+}
