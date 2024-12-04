@@ -1,10 +1,9 @@
 class Recipe < ApplicationRecord
+  def ingredients_list
+    ingredients.to_s.split("\n")
+  end
+
+  def procedures_list
+    procedures.to_s.split("\n")
+  end
 end
-class Recipe < ApplicationRecord
-    has_many :ingredients, dependent: :destroy
-    has_many :procedures, dependent: :destroy
-  
-    # 材料と手順を一緒に保存
-    accepts_nested_attributes_for :ingredients, allow_destroy: true
-    accepts_nested_attributes_for :procedures, allow_destroy: true
-  end  
