@@ -21,27 +21,19 @@
     </div>
 
     <div>
-      <%= form.label :type, "種類" %>
-      <%= form.text_field :type %>
+      <%= form.label :category, "種類" %>
+      <%= form.text_field :category %>
     </div>
 
-    <h2>材料</h2>
-    <%= form.fields_for :ingredients do |ingredient_form| %>
-      <div>
-        <%= ingredient_form.label :name, "材料" %>
-        <%= ingredient_form.text_field :name %>
-        <%= ingredient_form.check_box :_destroy %> 削除
-      </div>
-    <% end %>
+    <div>
+    <%= form.label :ingredients, "材料（改行区切りで入力）" %>
+    <%= form.text_area :ingredients, rows: 5 %>
+  </div>
 
-    <h2>作り方</h2>
-    <%= form.fields_for :procedures do |procedure_form| %>
-      <div>
-        <%= procedure_form.label :step, "手順" %>
-        <%= procedure_form.text_area :step %>
-        <%= procedure_form.check_box :_destroy %> 削除
-      </div>
-    <% end %>
+  <div>
+    <%= form.label :procedures, "作り方（改行区切りで入力）" %>
+    <%= form.text_area :procedures, rows: 5 %>
+  </div>
 
     <%= form.submit "追加" %>
   <% end %>

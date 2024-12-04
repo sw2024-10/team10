@@ -1,18 +1,19 @@
- <h1><%= @recipe.title %></h1>
- <p>所要時間: <%= @recipe.time %> 分</p>
- <p>カロリー: <%= @recipe.kcal %> kcal</p>
- <p>種類: <%= @recipe.category %></p>
+<h1><%= @recipe.title %></h1>
 
- <h2>材料</h2>
- <ul>
-   <% @recipe.ingredients.each do |ingredient| %>
-     <li><%= ingredient.name %></li>
-   <% end %>
- </ul>
+<p>所要時間: <%= @recipe.time %> 分</p>
+<p>カロリー: <%= @recipe.kcal %> kcal</p>
+<p>種類: <%= @recipe.category %></p>
 
- <h2>作り方</h2>
- <ol>
-   <% @recipe.procedures.each do |procedure| %>
-     <li><%= procedure.step %></li>
-   <% end %>
- </ol>
+<h2>材料</h2>
+<ul>
+  <% @recipe.ingredients_list.each do |ingredient| %>
+    <li><%= ingredient %></li>
+  <% end %>
+</ul>
+
+<h2>作り方</h2>
+<ol>
+  <% @recipe.procedures_list.each do |procedure| %>
+    <li><%= procedure %></li>
+  <% end %>
+</ol>
