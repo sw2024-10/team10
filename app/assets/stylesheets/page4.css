@@ -1,0 +1,93 @@
+/* 全体の背景色を設定 */
+body {
+  font-family: Arial, sans-serif;  /* フォントの設定 */
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);  /* グラデーション背景 */
+  margin: 0;
+  padding: 0;
+  color: #333;  /* 文字色 */
+}
+
+/* レシピ全体のコンテナにスタイル */
+.container {
+  width: 80%;
+  margin: 50px auto;  /* 中央に配置 */
+  padding: 20px;
+  background-color: #fff;  /* 白い背景 */
+  border-radius: 10px;  /* 丸みを持たせる */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* シャドウをつけて立体感 */
+}
+
+/* タイトルのデザイン */
+h1 {
+  font-size: 2.5em;
+  color: #000000;  /* 濃い灰色 */
+  text-align: center;  /* 中央揃え */
+  margin-bottom: 20px;
+}
+
+/* レシピのメタ情報のスタイル */
+p {
+  font-size: 1.2em;
+  margin: 5px 0;
+  text-align: center;  /* 中央揃え */
+  color: #666;  /* やや薄い灰色 */
+}
+
+/* 材料と作り方のタイトル */
+h2 {
+  font-size: 1.8em;
+  color: #4caf50;  /* 緑色 */
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* 材料リストのスタイル */
+ul, ol {
+  margin: 20px auto;
+  padding: 0;
+  max-width: 600px;
+}
+
+ul li, ol li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  padding-left: 20px;  /* 左のインデント */
+  list-style-type: none;
+  position: relative;
+}
+
+ul li::before, ol li::before {
+  content: "✔";  /* チェックマークアイコン */
+  position: absolute;
+  left: 0;
+  color: #4caf50;  /* チェックマークの色 */
+}
+
+/* 材料リスト（ul）のデザイン */
+ul {
+  list-style-type: none;  /* デフォルトのリストアイコンを削除 */
+}
+
+/* 作り方のリスト（ol）のデザイン */
+ol {
+  list-style-type: decimal;  /* 順番付きリスト */
+}
+
+/* レスポンシブデザイン（小さな画面対応） */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;  /* 小さい画面でも余白を調整 */
+  }
+
+  h1 {
+    font-size: 2em;  /* タイトルの文字サイズを縮小 */
+  }
+
+  h2 {
+    font-size: 1.5em;  /* 小さい画面でも読みやすく */
+  }
+
+  p {
+    font-size: 1em;  /* メタ情報の文字サイズを調整 */
+  }
+}
