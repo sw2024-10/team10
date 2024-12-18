@@ -1,93 +1,91 @@
-/* 全体の背景色を設定 */
+/* 全体リセットスタイル */
 body {
-  font-family: Arial, sans-serif;  /* フォントの設定 */
-  background: linear-gradient(to right, #fbc2eb, #a6c1ee);  /* グラデーション背景 */
   margin: 0;
   padding: 0;
-  color: #333;  /* 文字色 */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
 }
 
-/* レシピ全体のコンテナにスタイル */
+/* コンテナ */
 .container {
-  width: 80%;
-  margin: 50px auto;  /* 中央に配置 */
+  max-width: 800px;
+  margin: 50px auto;
   padding: 20px;
-  background-color: #fff;  /* 白い背景 */
-  border-radius: 10px;  /* 丸みを持たせる */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* シャドウをつけて立体感 */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border: 1px solid #ddd;
 }
 
-/* タイトルのデザイン */
+/* レシピのタイトル */
 h1 {
-  font-size: 2.5em;
-  color: #000000;  /* 濃い灰色 */
-  text-align: center;  /* 中央揃え */
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+/* レシピ情報 */
+.recipe-info {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
   margin-bottom: 20px;
 }
 
-/* レシピのメタ情報のスタイル */
-p {
-  font-size: 1.2em;
-  margin: 5px 0;
-  text-align: center;  /* 中央揃え */
-  color: #666;  /* やや薄い灰色 */
-}
-
-/* 材料と作り方のタイトル */
-h2 {
-  font-size: 1.8em;
-  color: #4caf50;  /* 緑色 */
-  margin-top: 30px;
+.recipe-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 10px 0;
   text-align: center;
 }
 
-/* 材料リストのスタイル */
-ul, ol {
-  margin: 20px auto;
-  padding: 0;
-  max-width: 600px;
+/* 材料セクションのタイトル */
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 30px 0 10px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
 }
 
-ul li, ol li {
-  font-size: 1.1em;
-  line-height: 1.6;
-  padding-left: 20px;  /* 左のインデント */
-  list-style-type: none;
-  position: relative;
-}
-
-ul li::before, ol li::before {
-  content: "✔";  /* チェックマークアイコン */
-  position: absolute;
-  left: 0;
-  color: #4caf50;  /* チェックマークの色 */
-}
-
-/* 材料リスト（ul）のデザイン */
+/* 材料リスト */
 ul {
-  list-style-type: none;  /* デフォルトのリストアイコンを削除 */
+  list-style-type: disc;
+  margin: 20px 0;
+  padding-left: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
 }
 
-/* 作り方のリスト（ol）のデザイン */
+ul li {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+/* 作り方リスト */
 ol {
-  list-style-type: decimal;  /* 順番付きリスト */
+  list-style-type: decimal;
+  margin: 20px 0;
+  padding-left: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
 }
 
-/* レスポンシブデザイン（小さな画面対応） */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%;  /* 小さい画面でも余白を調整 */
-  }
-
-  h1 {
-    font-size: 2em;  /* タイトルの文字サイズを縮小 */
-  }
-
-  h2 {
-    font-size: 1.5em;  /* 小さい画面でも読みやすく */
-  }
-
-  p {
-    font-size: 1em;  /* メタ情報の文字サイズを調整 */
-  }
+ol li {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 10px 0;
 }
