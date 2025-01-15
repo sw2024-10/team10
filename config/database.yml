@@ -11,7 +11,14 @@ default: &default
 
 development:
   <<: *default
-  database: storage/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: recipe_rpkq
+  username: recipe_rpkq_user
+  password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: storage/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
