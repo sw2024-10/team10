@@ -21,4 +21,7 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:title, :time, :kcal, :category, :ingredients, :procedures)
   end
+  def index
+    @recipes = Recipe.all  # すべてのレシピを取得
+  end
 end

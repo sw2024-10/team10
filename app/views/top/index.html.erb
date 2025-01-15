@@ -23,7 +23,9 @@
     <div class="content" id="content">
         <button id="toggle-btn">☰</button>
         <h1>メインコンテンツ</h1>
-        <p>ここにメインコンテンツが入ります。</p>
+        <div id="recipe-list">
+            <%= render 'recipes/index' %>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
